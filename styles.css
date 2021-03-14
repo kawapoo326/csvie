@@ -1,0 +1,159 @@
+
+/* =============== 基本 =================== */
+body {
+  font-family: Arial;
+  font-size: 14px;
+  background: #ffffff;
+}
+#header{
+  height: 30px;
+}
+
+
+/* =============== 出力ボタン =================== */
+.btn-flat-border {
+  display: inline-block;
+  padding: 0.1em 0.3em;
+  text-decoration: none;
+  color: rgb(0, 50, 175);
+  border: solid 1.5px rgb(0, 50, 175);
+  border-radius: 3px;
+  transition: .4s;
+}
+.btn-flat-border:hover {
+  background: rgb(70, 125, 250);
+  color: white;
+}
+
+
+/* =============== リストコントロールエリア =================== */
+.list-controle{
+  width: 50%;
+  margin-left: 10%;
+  margin-right: auto;  
+}
+a.expand{
+  cursor: pointer;
+  color: rgb(150, 150, 150);
+}
+label.filter{
+  font-size: 12px;
+}
+
+
+/* =============== テーブル基本 =================== */
+table {
+  border-collapse: collapse;
+  border: 1px solid rgb(200, 200, 200);
+  margin-left: auto;
+  margin-right: auto;
+  background:rgb(248, 250, 255);
+  font-size: 12px;
+  width: 75%;
+}
+
+/* =============== テーブル(リスト) =================== */
+table > thead {
+  background:rgb(70, 125, 250);
+  font-weight: bold;
+  color:#FFF;
+}
+tbody > tr > td {
+  border: 1px solid rgb(200, 200, 200);
+}
+tbody > tr > td > a {
+  color: rgb(90, 90, 90);
+  background-color: rgb(164, 188, 231);
+  margin: 1px;
+  padding: 1px;
+  cursor: pointer;
+}
+tbody > tr > td > a:hover {
+  background-color:lightgray;
+}
+
+/* =============== テーブル(フォーム) =================== */
+.lavel{
+  text-align: left;
+  padding: 0%;
+}
+th.lavel{
+  border: 1px solid rgb(200, 200, 200);
+}
+div#formInnerDiv td{
+  border: 1px solid rgb(200, 200, 200);
+  padding: 0;
+}
+.input-forms{
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+.input-form{
+  margin-bottom: 2px;
+}
+.form-action-buttons{
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+/* =============== フォームタブのテキストエリア ===================*/
+.textArea {
+	max-width: 60vw;
+	max-height: 65vh;
+	min-width: 300px;
+	min-height: 20px;
+  background    : #ffffff;
+  border        : 1px solid #1e6bb9;
+  border-radius : 4px;
+  padding       : 2px;
+  font-size     : 12px;
+  color         : #333333;
+}
+.textArea:placeholder-shown {
+  color         : #808080;
+}
+.textArea::-webkit-input-placeholder {
+  color         : #808080;
+}
+.textArea:-ms-input-placeholder {
+  color         : #808080;
+}
+
+
+/* ================== リスト・フォームタブ ================ */
+.tab-panel{
+  padding: 0%;
+}
+.tab-group{
+  padding-left: 3%;
+  padding-right: 3%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: center;
+}
+.tab{
+  flex-grow: 1;
+  padding:5px;
+  list-style:none;
+  border:solid 1px #CCC;
+  text-align:center;
+  cursor:pointer;
+}
+.panel-group{
+  /* height:100px; */
+  border:none;
+  }
+.panel{
+  display:none;
+}
+.tab.is-active{
+  background:rgb(100, 150, 255);
+  color:#FFF;
+  transition: all 0.2s ease-out;
+}
+.panel.is-show{
+  display:block;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="uft-8">
+  <title>csvEditer</title>
+  <!-- スタイルの読み込み -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div id="header">
+    <input type="file" name="file" id="file">
+    <button id="exportButton" class="btn-flat-border">csv出力</button>
+  </div>
+
+  <div class="tab-panel">
+    <!--タブ-->
+    <ul class="tab-group">
+      <li class="tab tab-list is-active" id="tab-list">リスト</li>
+      <li class="tab tab-form" id="tab-form">フォーム</li>
+    </ul>
+
+    <!--タブを切り替えて表示するコンテンツ-->
+    <div class="panel-group">
+
+      <!-- リストタブ -->
+      <div class="panel tab-list is-show">
+        <!-- 一覧制御機能 -->
+        <div class="list-controle">
+          <div onclick="obj=document.getElementById('open').style; obj.display=(obj.display=='none')?'block':'none';">
+            <a class="expand" >▶</a>
+          </div>
+          <div id="open" style="display:none;clear:both;">
+            <label class="filter">filter</label>
+            <input type="text">
+          </div>
+        </div>
+
+        <!-- リストテーブル -->
+        <div id="result"></div>
+      </div>
+
+      <!-- ビュー・フォームタブ -->
+      <div class="panel tab-form">
+        <form id="form">
+          <div id="formInnerDiv">
+          </div>
+          <div class="form-action-buttons">
+            <input type="submit" value="Submit" id="submit">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- javascriptの読み込み -->
+  <script type="text/javascript" src="csvie.js"></script>
+</body>
